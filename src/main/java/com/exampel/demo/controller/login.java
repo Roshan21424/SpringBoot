@@ -1,16 +1,15 @@
 package com.exampel.demo.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-//Controller -> will return anything
-//RestController -> will return always response body
+//component ->indicates that the class is a  custom beans and detect is automatically.
+//Controller -> indicates that it is a controller
+//RestController -> indicates that it is a controller + will always return a response body
 @RestController
 public class login {
 
-    //setting an endpoint
+    //setting endpointa
 
     //@RequestMapping(value="/",method= RequestMethod.GET)
     @GetMapping("/")
