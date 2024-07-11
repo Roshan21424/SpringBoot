@@ -1,6 +1,7 @@
 package com.exampel.demo.controller;
 
 import com.exampel.demo.entity.Department;
+import com.exampel.demo.exceptions.DepartmentNotFoundException;
 import com.exampel.demo.service.DepartmentService;
 import jakarta.validation.Valid;
 import org.slf4j.Logger;
@@ -25,13 +26,13 @@ public class DepartmentController {
     }
 
     @GetMapping("/departments")
-    public List<Department> fetchDepartmentBy(){
+    public List<Department> fetchDepartmentBy() {
         logger.info("inside the fetchDepartmentBy method of DepartmentController");
         return departmentService.fetchDepartmentList();
     }
 
     @GetMapping("/departments/{id}")
-    public Department fetchDepartmentById(@PathVariable("id") Long id){
+    public Department fetchDepartmentById(@PathVariable("id") Long id) throws DepartmentNotFoundException{
         logger.info("inside the fetchDepartmentById method of DepartmentController");
         return  departmentService.fetchDepartmentFromId(id);
     }
