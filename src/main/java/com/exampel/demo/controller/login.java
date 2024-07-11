@@ -1,5 +1,6 @@
 package com.exampel.demo.controller;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -9,11 +10,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class login {
 
+    @Value("${welcome.property}")
+    private String message;
+
     //setting endpointa
 
     //@RequestMapping(value="/",method= RequestMethod.GET)
     @GetMapping("/")
-    public String Login() {
-        return "welcome  to login";
+    public String Login()
+    {
+        return message;
     }
 }
