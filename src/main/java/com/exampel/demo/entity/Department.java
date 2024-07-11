@@ -5,6 +5,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.*;
+import org.hibernate.validator.constraints.Length;
 
 @Entity
 public class Department {
@@ -13,6 +15,19 @@ public class Department {
     @GeneratedValue(strategy = GenerationType.AUTO)
 
     private long departmentId;
+
+    @NotBlank(message = "Please add the department name")
+//    @Length(max=10,min = 1,message = "Please check the length")
+//    @Size(max=10,min=1,message = "Please check the size")
+//    @Email
+//    @Positive
+//    @Negative
+//    @PositiveOrZero
+//    @NegativeOrZero
+//    @Past
+//    @Future
+//    @PastOrPresent
+//    @FutureOrPresent
     private String departmentName;
     private String departmentAddress;
     private String departmentcode;
