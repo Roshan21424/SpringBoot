@@ -14,7 +14,7 @@ public class Department {
 
     private long departmentId;
     private String departmentName;
-    private String departAddress;
+    private String departmentAddress;
     private String departmentcode;
 
     public long getDepartmentId() {
@@ -33,12 +33,12 @@ public class Department {
         this.departmentName = departmentName;
     }
 
-    public String getDepartAddress() {
-        return departAddress;
+    public String getDepartmentAddress() {
+        return departmentAddress;
     }
 
-    public void setDepartAddress(String departAddress) {
-        this.departAddress = departAddress;
+    public void setDepartmentAddress(String departAddress) {
+        this.departmentAddress = departAddress;
     }
 
     public String getDepartmentcode() {
@@ -52,7 +52,7 @@ public class Department {
     public Department(long departmentId, String departmentName, String departAddress, String departmentcode) {
         this.departmentId = departmentId;
         this.departmentName = departmentName;
-        this.departAddress = departAddress;
+        this.departmentAddress = departAddress;
         this.departmentcode = departmentcode;
     }
     public Department(){
@@ -64,7 +64,7 @@ public class Department {
         return "Department{" +
                 "departmentId=" + departmentId +
                 ", departmentName='" + departmentName + '\'' +
-                ", departAddress='" + departAddress + '\'' +
+                ", departAddress='" + departmentAddress + '\'' +
                 ", departmentcode='" + departmentcode + '\'' +
                 '}';
     }
